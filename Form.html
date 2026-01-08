@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Form</title>
+
+     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('./Background-Image.webp') no-repeat center center/cover;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+
+        .form-container {
+            background: rgba(96, 26, 26, 0.7);
+            padding: 25px 35px;
+            border-radius: 12px;
+            width: 420px;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e942a;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px 2px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            padding: 0 5px;
+            color: #b78824;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button[type="submit"] {
+            background: #067c27;
+            color: #000;
+        }
+
+        button[type="reset"] {
+            background: #ff4444;
+            color: #fff;
+        }
+
+        button:hover {
+            opacity: 0.8;
+            text-decoration: solid;
+        }
+
+        .inline-group {
+            margin-bottom: 12px;
+        }
+
+        .inline-group label {
+            display: inline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- <div class="bg-image"></div> -->
+<div class="form-container">
+    <h2>Please fill form first</h2>
+
+    <form action="/action_page.php" target="_blank">
+
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter Name">
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter Email">
+
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="Enter Age">
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter Password">
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+
+        <label>Gender:</label>
+        <div class="inline-group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+            <label><input type="radio" name="gender"> Other</label>
+        </div>
+
+        <label>Skills:</label>
+        <div class="inline-group">
+            <label><input type="checkbox" name="skills"> HTML</label>
+            <label><input type="checkbox" name="skills"> CSS</label>
+            <label><input type="checkbox" name="skills"> JS</label>
+        </div>
+
+        <label>Select Location:</label>
+        <select name="location">
+            <option>Select</option>
+            <option>Indore</option>
+            <option>Pune</option>
+            <option>Bangalore</option>
+        </select>
+
+        <label>Tell me about yourself:</label>
+        <textarea rows="3"></textarea>
+
+        <label>Upload resume file:</label>
+        <input type="file">
+
+        <label>Browser:</label>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Edge">
+            <option value="Firefox">
+        </datalist>
+
+        <fieldset>
+            <legend>Login Info</legend>
+            <label>Username</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="password">
+        </fieldset>
+
+        <div style="display:flex; justify-content: space-between;">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
