@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating a Form</title>
+    <link rel="icon" type="image/x-icon" href="./images.png">
 
      <style>
         body {
@@ -19,18 +20,20 @@
         
 
         .form-container {
-            background: rgba(96, 26, 26, 0.7);
+            background: rgba(19, 18, 18, 0.7);
             padding: 25px 35px;
             border-radius: 12px;
             width: 420px;
-            color: #fff;
+            color: #28802c;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            color: aqua;
         }
 
         h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #1e942a;
+            text-decoration: underline;
         }
 
         label {
@@ -59,7 +62,7 @@
         }
 
         fieldset {
-            border: 1px solid #ccc;
+            border: 1px solid #d94646;
             padding: 10px;
             margin-bottom: 15px;
         }
@@ -113,7 +116,7 @@
     <form action="/action_page.php" target="_blank">
 
         <label>Name:</label>
-        <input type="text" name="name" placeholder="Enter Name">
+        <input type="text" name="name" placeholder="Ex. Prakash Tiwari">
 
         <label>Email:</label>
         <input type="email" name="email" placeholder="Enter Email">
@@ -141,6 +144,13 @@
             <label><input type="checkbox" name="skills"> JS</label>
         </div>
 
+          <label>Developer:</label>
+        <div class="inline-group">
+            <label><input type="checkbox" name="skills"> Frontend</label>
+            <label><input type="checkbox" name="skills"> Backend</label>
+            <label><input type="checkbox" name="skills"> Fullstack</label>
+        </div>
+
         <label>Select Location:</label>
         <select name="location">
             <option>Select</option>
@@ -166,9 +176,9 @@
         <fieldset>
             <legend>Login Info</legend>
             <label>Username</label>
-            <input type="text">
+            <input type="text" placeholder="Login id">
             <label>Password</label>
-            <input type="password">
+            <input type="password" placeholder="***********">
         </fieldset>
 
         <div style="display:flex; justify-content: space-between;">
